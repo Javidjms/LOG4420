@@ -1,0 +1,14 @@
+div(class="ajoutsItems")
+	h1(ng-if="listeItems.length == 1") Voulez-vous ajouter l'item suivant :
+	div(ng-if="listeItems.length == 1")
+		p {{listeItems[0].item}}
+		br
+		input(type="button" ng-click="goItem(0)" value="Je prends !")
+		input(type="button" ng-click="nopeItem(0)" value="Tu peux te la garder !")
+		
+	h1(ng-if="listeItems.length != 1") Choisissez parmi les items suivants :
+	div(ng-if="listeItems.length != 1")
+		div(ng-repeat="c in listeItems")
+			input.checkbox(type="checkbox" ng-change="update(c)" ng-model="itemsChoisis" name="checkbox1" value="{{c}}")
+			| {{c.item}}
+		input(type="button" ng-click="goItem(1)" value="Voilà go next !")

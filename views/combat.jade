@@ -1,0 +1,44 @@
+extend layoutCombat
+
+block content
+	- var combatOnly = true
+	- var combat = true
+	- var image = true
+
+	h1 Combat contre {{ennemy.name}}
+	h2 Statistiques de l'ennemi : ENDURANCE = {{ennemy.endurance}}  | HABILITE = {{ennemy.habilite}}
+	p
+		table(border="2")
+			thead
+				tr
+					th Tour
+					th Mon HABILITE
+					th Mon ENDURANCE
+					th Adv HABILITE
+					th Adv ENDURANCE
+					th Ratio de Combat
+					th Random Number
+					th Mes Dégats
+					th Adv Dégats
+					th Mon ENDURANCE Après Dégats
+					th Adv ENDURANCE Après Dégats
+				tr(ng-repeat="round in rounds")
+					td {{round.tour}}
+					td {{round.mhabilite}}
+					td {{round.mendurance}}
+					td {{round.ahabilite}}
+					td {{round.aendurance}}
+					td {{round.ratio}}
+					td {{round.random}}
+					td {{round.endPerdueJoueur}}
+					td {{round.endPerdueEnnemy}}
+					td {{round.mdegat}}
+					td {{round.adegat}}
+		
+	input(type="button" value="Combat" ng-click="attaquer()")
+	input(type="button" value="Fuir" onclick="location.href='/fuite'")
+	input(id="PuissancePsy" type="button" value="Puissance Psy" ng-click="utiliserPuissancePsy()" ng-show="PuissancePsy;" ng-disabled="false;")
+	include mort.jade
+	include victoire.jade
+								
+	img(src="/images/ennemy/bakanal.jpg",class="ennemyPicture")

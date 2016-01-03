@@ -1,0 +1,84 @@
+extends layoutHorsJeu
+
+block content
+	- var footerSet = false
+	
+	h1 Creation de personnage
+	h2 Veuillez sélectionner 5 compétences et 2 items
+	
+	if error
+		each message in error
+			p(class='messageErreur')=message
+	
+	form(method="post" action="pagecreation" ng-controller="ValidationFormulaire")
+		fieldset
+			legend Nom de votre personnage
+			label(for="Nom")
+			| Nom
+			input(type="text" name="name" ng-model="creation.name" ng-change="updateName()")
+		fieldset
+			legend Choisissez 5 Compétences
+			| Le Camouflage
+			input.checkbox1(type="checkbox" name="checkbox1" value="CAMOUFLAGE" ng-model = "creation.competences[0]" ng-change="update(0)")
+			| La Chasse
+			input.checkbox1(type="checkbox" name="checkbox1" value="CHASSE" ng-model = "creation.competences[1]" ng-change="update(1)")
+			| Sixième Sens
+			input.checkbox1(type="checkbox" name="checkbox1" value="SIXIEME" ng-model = "creation.competences[2]" ng-change="update(2)")
+			| Orientation
+			input.checkbox1(type="checkbox" name="checkbox1" value="ORIENTATION" ng-model = "creation.competences[3]" ng-change="update(3)")
+			| La Guérison
+			input.checkbox1(type="checkbox" name="checkbox1" value="GUERISON" ng-model = "creation.competences[4]" ng-change="update(4)")
+			| Maîtrise des armes
+			input.checkbox1(type="checkbox" name="checkbox1" value="MAITRISE_ARME" ng-model = "creation.competences[5]" ng-change="update(5)")
+			| Bouclier Psychique
+			input.checkbox1(type="checkbox" name="checkbox1" value="BOUCLIER_PSY" ng-model = "creation.competences[6]" ng-change="update(6)")
+			| Puissance Psychique
+			input.checkbox1(type="checkbox" name="checkbox1" value="PUISSANCE_PSY" ng-model = "creation.competences[7]" ng-change="update(7)")
+			| Communication Animale
+			input.checkbox1(type="checkbox" name="checkbox1" value="COMM_ANIMAL" ng-model = "creation.competences[8]" ng-change="update(8)")
+			| Maîtrise Psychique de la matière
+			input.checkbox1(type="checkbox" name="checkbox1" value="MAITRISE_PSY" ng-model = "creation.competences[9]" ng-change="update(9)")
+		fieldset
+			legend Choisissez 2 items de départ
+			| Epee
+			input.checkbox2(type="checkbox" name="checkbox2" value="EPEE" ng-model = "creation.item[0]" ng-change="updateItem(0)")
+			| Sabre
+			input.checkbox2(type="checkbox" name="checkbox2" value="SABRE" ng-model = "creation.item[1]" ng-change="updateItem(1)")
+			| Lance
+			input.checkbox2(type="checkbox" name="checkbox2" value="LANCE" ng-model = "creation.item[2]" ng-change="updateItem(2)")
+			| Masse d'armes
+			input.checkbox2(type="checkbox" name="checkbox2" value="MASSE_ARMES" ng-model = "creation.item[3]" ng-change="updateItem(3)")
+			| Hache
+			input.checkbox2(type="checkbox" name="checkbox2" value="HACHE" ng-model = "creation.item[4]" ng-change="updateItem(4)")
+			| Baton
+			input.checkbox2(type="checkbox" name="checkbox2" value="BATON" ng-model = "creation.item[5]" ng-change="updateItem(5)")
+			| Glaive
+			input.checkbox2(type="checkbox" name="checkbox2" value="GLAIVE" ng-model = "creation.item[6]" ng-change="updateItem(6)")
+			| Veste matelassée
+			input.checkbox2(type="checkbox" name="checkbox2" value="MATELASSEE" ng-model = "creation.item[7]" ng-change="updateItem(7)")
+			| Potion de Lampure
+			input.checkbox2(type="checkbox" name="checkbox2" value="POTION" ng-model = "creation.item[8]" ng-change="updateItem(8)")
+			| Ration supplémentaire
+			input.checkbox2(type="checkbox" name="checkbox2" value="RATION" ng-model = "creation.item[9]" ng-change="updateItem(9)")
+		div(class="imagecentrale")
+			input#submit(type="submit" value="Créer le personnage" ng-show="isValid"  ng-disabled="!isValid" )
+	
+	div(ng-controller="ChargementPersonnages")
+		if personnages == []
+			p Il n'y a aucun joueurs existant.
+		else
+			h1 Choix d'un personnage existant
+		ul
+			-var i = 0
+			for personnage in personnages
+				li(id=personnage._id ng-show="true;") 
+					- var tmp = "suppression("+"'"+personnage._id+"'"+")"
+					- var tmp2 = "personnage["+i+"]"
+					- var tmp3 = "location.href='/load/"+personnage._id+"';"
+					p(ng-model=tmp2)=personnage.name
+					input(type="button" value="Choisir" onclick=tmp3)
+					input(type="button"  value="Supprimer" ng-click=tmp)
+				- i=i+1
+				
+	img(src="/images/creation/creation.png",id="fondCreation")
+	

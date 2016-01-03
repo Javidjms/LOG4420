@@ -1,0 +1,15 @@
+table(border="1",class="choix_stats")
+	thead
+		tr
+			th Nom de l'ennemi
+			th Endurance de l'ennemi
+			th Habilité de l'ennemi
+			th Endurance inital du Loup Solitaire
+			th Endurance après le combat du Loup Solitaire
+		tr(ng-repeat="combat in historique")
+			td {{combat.ennemy.name}}
+			td {{combat.ennemy.endurance}}
+			td {{combat.ennemy.habilite}}
+			td {{combat.enduranceAvant}}
+			td {{combat.enduranceApres}}
+			

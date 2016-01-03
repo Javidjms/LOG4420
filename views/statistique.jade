@@ -1,0 +1,29 @@
+fieldset
+	legend Informations
+	div Nom : {{personnage.name}}
+	div Habilite : {{personnage.habiliteBonifiee}}
+	div Endurance : {{personnage.enduranceBonifiee}}
+	div Piece d'or : {{personnage.pieceOr}}
+	
+fieldset(class="fieldsetInventaire")
+	legend Contenu de l'inventaire
+	ul
+		li(ng-repeat="arme in personnage.listeArmes") {{arme}}
+	
+	ul
+		li(ng-repeat="objet in personnage.listeSpeciale") {{objet}}
+		
+	a(href="#spe")
+		img(src="/images/bouton/bouton.png",class="boutons")
+	
+	ul
+		li(ng-repeat="objet in personnage.listeItems") {{objet}}
+	a(href="#sac")
+		img(src="/images/bouton/bouton.png",class="boutons")
+	
+			
+fieldset 
+	legend Compétences
+	p Rang : Initié
+	ul
+		li(ng-repeat="competence in personnage.listeDisciplines") {{competence}}

@@ -1,0 +1,21 @@
+doctype html
+html(ng-app="AppHorsJeu")
+	head
+		if title == "Page d'accueil" 
+			title= "Le Loup solitaire"
+		else 
+			title= "Le Loup solitaire - "+title 
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src="/javascripts/jquery.js")
+		script(src="/javascripts/angular.js")
+		script(src="/javascripts/controller.js")
+
+	header
+		include header
+		
+	body
+		block content
+		
+	if footerSet
+		footer
+			include footer

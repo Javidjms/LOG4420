@@ -1,0 +1,18 @@
+a(href="/",id="entete-picture")
+	img(src="/images/index/picture2.png",id="lonelywolf")
+	ul(id="menu_entete")
+		li 
+			if menu == 1 
+				a(href="/",id="accueil", class="boutonMenu") Accueil
+			if menu !== 1
+				a(href="/",id="accueil", class="boutonMenuNot") Accueil
+		li
+			if menu == 2
+				a(href="/homepage",id="game", class="boutonMenu") Règle du jeu
+			if menu !== 2
+				a(href="/homepage",id="game", class="boutonMenuNot") Règle du jeu
+		li 
+			if menu == 3
+				a(href="/pageaide",id="help", class="boutonMenu") Aide
+			if menu !== 3
+				a(href="/pageaide",id="help", class="boutonMenuNot") Aide

@@ -1,0 +1,123 @@
+extends layoutHorsJeu
+
+block content
+	- var footerSet = true
+	h1=title
+	article
+		h1 Différentes compétences
+		ul
+			li 
+				h1 Le Camouflage
+				p Cette technique permet au Seigneur Kaï de se fondre dans lepaysage. A la campagne, il peut se cacher parmi les arbres et lesrochers et se rendre de cette façon invisible à l'ennemi même s'ilpasse tout près de lui. Dans une ville, cette Discipline donnera àcelui qui l'utilise la faculté d'avoir l'air d'un habitant du cru, tantpar l'apparence que par l'accent ou la langue employée. On peutainsi trouver un abri où se cacher en toute sécurité.
+			li
+				h1 La Chasse
+				p Cette Discipline donne au Seigneur Kaï l'assurance qu'il nemourra jamais de faim, même s'il se trouve dans unenvironnement hostile. Il aura toujours la possibilité de chasserpour se procurer de la nourriture, sauf dans les déserts et autresrégions arides. Vous devez savoir que la Vassagonie est un empire situé au cœur du désert. Dans ce pays aride, les occasions de faire bonne chasse seront peut-être rares, pour ne pas direinexistantes. Cette technique, cependant, se révélera très utile,car elle permet à un Seigneur Kaï de se déplacer très vite et avecune grande agilité.
+			li
+				h1 L'Orientation
+				p Chaque fois qu'il se trouvera dans l'obligation de décider quelledirection il doit prendre, le Seigneur Kaï fera toujours le bonchoix grâce à cette technique. Il saura ainsi quel chemin ilconvient d'emprunter dans une forêt et il pourra également, dansune ville, découvrir l'endroit où est caché une personne ou unobjet. Par ailleurs, il saura interpréter chaque trace de pas,chaque empreinte qui pourrait lui permettre de remonter unepiste.
+			li
+				h1 La Guérison
+				p Cette Discipline donne la faculté de récupérer des pointsd'ENDURANCE perdus lors d'un combat. Si vous maîtrisez cettetechnique, vous pourrez ajouter 1 point d'ENDURANCE à votretotal chaque fois qu'il vous sera possible d'aller d'un bout àl'autre d'un paragraphe sans avoir à combattre un ennemi. (Vousn'aurez le droit d'utiliser cette technique de la Guérison quelorsque vos points d'ENDURANCE seront tombés en dessous de votre total initial. Rappelez-vous que vos points d'ENDURANCEne peuvent en aucun cas excéder votre total de départ.)
+			li 
+				h1 La Maîtrise des armes
+				p En entrant au monastère Kaï, chaque élève a la possibilité d'êtreinitié au maniement d'une arme. Si vous choisissez d'avoir laMaîtrise d'une arme, utilisez la Table de Hasard à la manièrehabituelle pour obtenir un chiffre qui correspondra, dans la listeci-dessous, à l'arme dont on vous aura enseigné le maniement. Vous aurez dès lors la parfaite Maîtrise de cette arme et, chaquefois que vous combattrez avec elle, vous aurez droit à 2 pointsd'HABILETÉ supplémentaires. Le fait que vous ayez la Maîtrise d'une arme ne signifienullement que vous disposerez de cette arme dès le début de votre aventure ; au cours de celle-ci, cependant, l'occasion voussera donnée de vous la procurer. Vous pourrez d'ailleurs acquérirdiverses armes au cours de votre quête mais vous n'aurez pas ledroit d'en posséder plus de 2 à la fois.
+			li
+				h1 Bouclier Psychique
+				p Certaines créatures malfaisantes de Magnamund ont la facultéde vous porter atteinte en faisant usage de leur force psychique.La technique du Bouclier Psychique vous permet cependant dene pas perdre de points d'ENDURANCE lorsque vous voustrouvez soumis à une telle agression.
+			li
+				h1 Puissance Psychique
+				p Cette technique permet au Seigneur Kaï d'attaquer un ennemi ense servant de la force de son esprit : on peut l'utiliser en mêmetemps qu'une arme de combat habituelle et l'on dispose alors de2 points supplémentaires d'HABILETÉ. Cette PuissancePsychique, cependant, n'est pas forcément efficace avec toutesles créatures : il se peut que certaines d'entre elles y soientinsensibles. Si le cas se présente, vous en serez averti au cours de votre mission.
+			li
+				h1 Communication animale
+				p Grâce à cette technique, un Seigneur Kaï peut communiquer aveccertains animaux et deviner les intentions de certains autres.
+			li
+				h1 Maîtrise psychique de la matière
+				p C'est une technique qui donne à un Seigneur Kaï la faculté dedéplacer de petits objets par le simple pouvoir de saconcentration mentale.
+	article
+		h1 Equipement
+		article
+			h1 Armes
+			ul
+				li Le poignard
+				li La lance
+				li La Masse d'arme
+				li Le Sabre
+				li Le Marteau de guerre
+				li L'épée
+				li La Hache
+				li Le Baton 
+				li Le glaive
+			div(class="imagecentrale")
+				img(src="/images/armes/arme1.png") 
+				img(src="/images/armes/arme2.png")
+		article
+			h1 Autres équipements
+			p Avant que vous ne quittiez le port d'Anskaven, situé sur la côtenord du Sommerlund, on vous escorte jusqu'à l'Hôtel de Villepour vous y remettre un équipement composé de bottesspécialement adaptées au climat polaire, d'une tunique, d'unecape doublée de fourrure et de moufles. On vous donneégalement une carte du pays de Kalte (voir en tête de ce volume)ainsi qu'une bourse contenant des Pièces d'Or. Pour savoircombien de pièces cette bourse contient, utilisez la Table de Hasard pour obtenir un chiffre. Ajoutez 10 à ce chiffre : vousconnaîtrez alors le nombre de Pièces d'Or dont vous disposez.Inscrivez ce nombre dans la case Pièces d'Or de votre Feuille d'Aventure. (Si vous avez mené avec succès les aventuresprécédentes de la série du Loup Solitaire, vous avez le droitd'ajouter les pièces que l'on vient de vous donner à celles que vous possédez peut-être déjà. Mais n'oubliez pas que vous nepouvez pas emporter avec vous plus de cinquante Pièces d'Or.) Avant de partir, on vous offre un choix d'objets. Vous ne pouvezen prendre que deux dans la liste ci-dessous. Ils viendronts'ajouter à ceux que vous aviez éventuellement en votrepossession à l'issue d'une précédente aventure, mais souvenez- vous que vous n'avez toujours droit qu'à deux armes. Voici laliste :
+			ul
+				li ÉPÉE (case Armes de votre Feuille d'Aventure) SABRE (Armes)
+				li GILET DE CUIR MATELASSÉ (Objets Spéciaux)
+				li Ce gilet vous donne droit à 2 points d'ENDURANCE supplémentaires.
+				li LANCE (Armes) MASSE D'ARME (Armes). MARTEAU DEGUERRE (Armes). HACHE (Armes).
+				li 
+					p POTION DE LAUMSPUR (objets contenus dans votre Sac àDos). Cette potion vous rendra 4 points d'ENDURANCE lorsque vous la boirez à la fin d'un combat. Le flacon que l'on vous donnen'en contient qu'une seule dose.
+					p RATIONS SPÉCIALES (Repas). Elles comptent pour un Repas(reportez-vous à la rubrique nourriture en page 24 avant dedécider si vous les prenez ou non).
+					div(class="imagecentrale")
+						img(src="/images/equipements/laumpsur.png")
+		article
+			h1 Répartition de l'équipement
+			p A présent que vous disposez de votre équipement, il vous fautsavoir comment il se répartit afin que vous puissiez letransporter plus aisément. Il n'est pas nécessaire de prendre desnotes à ce sujet, vous vous contenterez, en cas de besoin, de vousréférer aux indications données dans la liste ci-dessous.
+			p Vous transportez toutes les armes à la main et par conséquent ne pouvez en prendre que deux au maximum. Les équipements spéciaux ne pèsent aucun poids, votre sac ne peut contenir que 8 items excluant les armes, les équipements spéciaux et l'or, l'or étant stocké dans une bourse à votre ceinture pouvant contenir un maximum de 50 po.	
+		article
+			h1 Comment utiliser votre équipement ?
+			article 
+				h1 Les armes
+				p Les armes vous aident à combattre vos ennemis. Si vous avezchoisi la Discipline de la Maîtrise des Armes et que vousdisposiez de l'arme qui vous a été attribuée par la Table de Hasard, vous aurez le droit d'ajouter 2 points à votre totald'HABILETÉ. Si vous êtes obligé de combattre sans arme, vousdevrez déduire 4 points de votre total d'HABILETÉ et vous battreà mains nues. Si vous découvrez une arme au cours de votreaventure, vous pouvez la garder et l'utiliser, mais rappelez-vousque vous n'avez pas le droit de posséder plus de deux armes à lafois.
+			article
+				h1 Objets contenus dans votre sac 
+				p Au cours de votre quête, vous découvrirez divers objets quipourraient se révéler utiles et que vous souhaiterez peut-êtreconserver (rappelez-vous que vous ne pouvez jamais transporterplus de huit objets dans votre Sac à Dos). Vous avez le droit àtout moment d'échanger l'un de ces objets ou tout simplement de vous en débarrasser, mais il vous est interdit de le faire lorsque vous êtes engagé dans un combat.
+			article
+				h1 Objets spéciaux
+				p Chacun de ces objets possède des propriétés bien particulières.Parfois, ces propriétés vous seront décrites au moment même dela découverte de l'objet; d'autres fois, il vous faudra attendrequ'elles se révèlent au cours de votre aventure. Si vous avez déjàmené à bien plusieurs aventures de la série Loup Solitaire, vousdevez déjà posséder certains Objets Spéciaux. Si tel est le cas, vous pouvez emporter ceux de votre choix avec vous, ou bien leslaisser en sécurité dans votre monastère Kaï. Les Objets Spéciauxque vous y laisserez ne pourront évidemment pas vous servir lorsde la présente mission, mais vous serez sûr, au moins, de ne pasles perdre tout au long de vos péripéties.
+			article
+				h1 Pièces d'or
+				p La monnaie en cours dans le royaume du Sommerlund et dansl'empire de Vassagonie est la Couronne qui se présente sous laforme d'une petite Pièce d'Or. Chaque fois que vous tuerez unennemi et que vous déciderez de fouiller son cadavre, vous aurezle droit de conserver dans votre bourse toutes les Pièces d'Or que vous pourriez trouver sur lui.
+			article
+				h1 Nourriture
+				p Tout au long de votre quête, vous aurez besoin de vous nourrir àintervalles réguliers. S'il ne vous reste plus de vivres lorsque vousserez dans l'obligation de prendre un Repas, vous perdrez 3points d'ENDURANCE. Mais si vous maîtrisez la Discipline Kaïde la Chasse, vous n'aurez pas à rayer un Repas de votre Feuilled'Aventure chaque fois que vous devrez manger. Rappelez-vouscependant que si vous vous trouvez dans une région aride oudésertique, il ne vous sera pas possible de faire usage de cetteDiscipline, faute de gibier.) Potion de Laumspur - C'est une Potion de Guérison qui vouspermet de reprendre 4 points d'ENDURANCE si vous en buvez àl'issue d'un combat. Vous ne disposez que d'une seule dose. Si, aucours de votre quête, vous veniez à découvrir d'autres potions,leurs effets vous seraient indiqués en temps utile. Toutes lespotions font partie des Objets contenus dans votre Sac à Dos.
+	article 
+		h1 Combats
+		article
+			h1 Règles des combats
+			p Au cours de votre mission, vous aurez parfois à combattre unennemi. Le texte vous précisera en chaque circonstance quelssont les points d'HABILETÉ et d'ENDURANCE de l'ennemi enquestion. Le Loup Solitaire (c'est-à-dire vous-même) devra alorss'efforcer de tuer son adversaire en réduisant à zéro les pointsd'ENDURANCE de ce dernier, tout en essayant lui-même deperdre le moins possible de points d'ENDURANCE au cours del'affrontement. Au début de chaque combat, inscrivez le totald'ENDURANCE du Loup Solitaire, ainsi que celui de l'ennemi sur votre Feuille d'Aventure. Ces indications devront être portéesdans la case Compte Rendu des Combats. Chaque affrontementse déroule de la manière suivante :1. Ajoutez à votre total d'HABILETÉ les points supplémentairesque certaines Disciplines Kaï peuvent vous donner.2. Soustrayez du total ainsi obtenu les points d'HABILETÉ de votre adversaire. Le résultat de cette soustraction vous donneraun Quotient d'Attaque.
+		article
+			h1 Possibilité de fuite
+			p  Au cours de votre aventure, la possibilité d'échapper à un combat vous sera parfois accordée. Si vous avez déjà engagé un Assaut etque vous décidiez de prendre la fuite, menez d'abord cet Assaut àson terme en observant les règles habituelles. Mais votreadversaire ne perdra alors aucun point d'ENDURANCE. Seul vous, le Loup Solitaire, perdrez le nombre de points indiqué parla Table des Coups Portés.
+		article
+			h1 Niveau d'entraînement Kaï
+			p Le tableau ci-dessous vous indique les divers rangs et titres quisont accordés aux Seigneurs Kaï à chaque étape de leurentraînement. A chaque fois que vous aurez accompli avec succèsune mission de la série Loup Solitaire, vous aurez la maîtrised'une Discipline Kaï supplémentaire et vous pourrez ainsiaccéder progressivement à la connaissance complète des DixDisciplines Kaï. Vous pourrez ensuite vous enfuiraprès avoir payé votre couardise par la réduction de votre totald'ENDURANCE. Mais rappelez-vous que vous n'aurez le droit deprendre la fuite que si vous y êtes autorisé ; les précisionsnécessaires vous seront fournies à chaque fois. Nombre de Disciplines Titre correspondant maîtrisées par leSeigneur Kaï
+			ul 
+				li 1 - Postulant
+				li 2 - Novice
+				li 3 - Apprenti
+				li 4 - Disciple
+				li 5 - Initié (C'est le rang que vous avez quand vous entreprenezpour la première fois une aventure du Loup Solitaire.)
+				li 6 - Aspirant
+				li 7 - Gardien
+				li 8 - Guerrier ou Compagnon
+				li 9 - Savant
+				li 10 - Maître
+				
+	article
+		h1 Sujets de ce Laboratoire
+		a(href="/Enonces/tp1.pdf") Enoncé du TP1
+		br
+		a(href="/Enonces/tp2.pdf") Enoncé du TP2
+		br
+		a(href="/Enonces/tp3.pdf") Enoncé du TP3
+		br
+		a(href="/Enonces/tp4.pdf") Enoncé du TP4
+		br
+		a(href="/Enonces/tp5.pdf") Enoncé du TP5
+		br
+		a(href="http://fr.scribd.com/doc/127964396/Loup-Solitaire-03-Les-Grottes-de-Kalte") Livre original 
+		br

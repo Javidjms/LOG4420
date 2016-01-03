@@ -1,0 +1,65 @@
+doctype html
+html(ng-app="AppHorsJeu")
+	head
+		if title == "Page d'accueil" 
+			title= "Le Loup solitaire"
+		else 
+			title {{titre}}
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		
+		script(src="/javascripts/jquery.js")
+		script(src="/javascripts/angular.js")
+		script(src="/javascripts/controller.js")
+
+	header
+		include header
+		
+	body(ng-controller="ChargementPage")
+		div(class="jeu" id="changement")
+			block content
+			input(type="button",onclick="location.href='/combat';",value="A l'attaque !" ng-hide="bouton")
+			input(type="button" value="Fuir" onclick="location.href='/fuite'" ng-hide="bouton")
+			input(type="button" value="Page aléatoire" ng-click="randomPage()" ng-hide="isRandom")
+			include popuprepas.jade
+			include mort.jade
+			include victoire.jade
+			include differentsItems.jade
+			include popups.jade
+			
+		
+		div(class="jeu")
+			fieldset(class="choix_stats")
+				legend Choix
+				div(ng-repeat="c in listeChoix")
+					a(href ng-click="chargement(c)") {{c}}
+					br
+		img(src="/images/armes/epee.png",class="swordPicture")
+			
+		aside(id="pertePoints" ng-hide="isPertePopupHidden")
+			div(class="enduranceLost")
+				p Vous perdez des points d'endurance
+				input(type="button", ng-click="isPertePopupHidden=true" ,value="Ok !")
+			a(href="#pertePoints")
+				div(class="fondPerte")
+				
+		aside(id="PopupGuerison" ng-show="hasEndurancePerdue")
+			div(class="nouvelItem")
+				p Voulez vous utilisez votre discipline Guérison ?
+				input(type="button", ng-click="utiliserGuerison()" ,value="Oui")
+				input(type="button", ng-click="hasEndurancePerdue=false" ,value="Non")
+			a(href="#pertePoints")
+				div(class="fond")
+		
+		aside
+			fieldset(class="stats")
+				legend Statistique
+				include statistique
+	
+		div(class="jeu")
+			fieldset
+				legend Historique des combats
+				include historiqueCombat
+		
+	if footerSet
+		footer
+			include footer

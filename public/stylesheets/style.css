@@ -1,0 +1,384 @@
+@font-face {
+	font-family: 'police';
+	src: url('/police/police.ttf');
+}
+
+body {
+  padding: 14px;
+  font-family:  'police';
+  font-size: 15px;
+  color : black;
+  position: absolute;
+  top: 10%;
+  text-align: justify;
+  background-image: url("/images/background/background.jpg");
+  background-attachment:fixed;
+  background-position: center;
+}
+
+.jeu {
+  top:25%;
+  position: relative;
+  left: 16%;
+  width: 60%;
+}
+
+.combat {
+	position: relative;
+	left:15%;
+	top:10%;
+	width: 75%;
+}
+
+p:first-letter {
+	font-family: cursive;
+	font-size:x-large;
+}
+
+#lonelywolf{
+	z-index:3;
+}
+
+#footer-picture{
+	text-align: center;
+}
+
+.numeroPage {
+	color: blue;
+	text-decoration: underline;
+}
+
+#menu_entete{
+	list-style:none;
+	text-align: center;
+	position: fixed;
+	top:10%;
+	background: #A3A3A3;
+	width: 300px;
+	border-style: solid;
+	border-width:1px;
+	border-radius: 10px;
+	left: 35%;
+	z-index: 2;
+}
+
+
+#entete-picture {
+	position: fixed;
+	top: -1%;
+	left: 35%;
+	z-index: 2;
+}
+
+#menu_entete li {
+	display: inline;
+}
+
+#menu_entete a {
+	margin: 5%;
+}
+
+#menu_entete a:hover{
+	color:red;
+}
+
+.boutonMenu {
+	text-decoration: none;
+	color: white;
+}
+
+form fieldset {
+	font-size: 14px;
+	color: black;
+	border-radius: 40%;
+	border-color: red;
+	border-width: 2px;
+	text-align: center;
+}
+
+form {
+	text-align: center;
+	font-weight: bold;
+}
+
+.boutonMenuNot {
+	text-decoration: none;
+	color: black;
+}
+
+#pageAccueil {
+	position: fixed;
+	left:35%;
+	top:20%;
+}
+
+.imagecentrale {
+	text-align: center;
+}
+
+aside .stats{
+	position: absolute;
+	top: 5%;
+	width: 18%;
+	right: 0.1%;
+	background: #A3A3A3;
+	background: url("/images/background/stats.jpg");
+	background-attachment:absolute;
+  	background-position: right;
+  	border-radius: 10px;
+  	border-color: black;
+  	border-width: 6px;
+  	font-weight: bold;
+}
+
+aside .stats fieldset {
+	border-radius: 10px;
+  	border-color: black;
+  	border-width: 2px;
+}
+
+aside .stats fieldset fieldset{
+	border: 0px;
+}
+
+aside .stats ul {
+	list-style-type: none;
+}
+
+fieldset {
+	border-radius: 10px;
+	border-width: 3px;
+	border-color: white;
+	color: white;
+	text-align: left;
+}
+
+fieldsetInventaire {
+	position:relative;
+}
+
+legend {
+	text-align: center;
+	color:black;
+}
+
+.modal {
+	display: none;
+}
+
+.modal:target {
+	visibility: visible;
+}
+
+#pageAccueil h1 {
+	position: fixed;
+	left: 38%;
+}
+
+.popup {
+	display:none;
+}
+
+.victoire {
+	display:inline;
+}
+
+.popup:target{
+	display:inline;
+	position:fixed;
+	z-index:1;
+}
+
+.popupPerte {
+	display:inline;
+	position:fixed;
+	z-index:1;
+}
+
+.popupPerte:target{
+	display:none;
+}
+
+.fond {
+	position:fixed;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	z-index: 1;
+	width:100%;
+	background: black;
+	opacity:0.5;
+	z-index:1;
+}
+
+.fondPerte {
+	position:fixed;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	z-index: 1;
+	width:100%;
+	background-image: url("/images/background/sangFond.jpg");
+	background-position: center;
+	opacity:0.5;
+	z-index:1;
+}
+
+.sacContent {
+	background-image:url("/images/background/stats.jpg");
+	background-position: center;
+	width:50%;
+	height: 33%;
+	left: 25%;
+	position:fixed;
+	top:33%;
+	z-index:2;
+	border-radius:80px;
+	border-color: black;
+	border-width: 3px;
+	text-align: center;
+	font-size: 24px;
+	color:white;
+	font-weight: bold;
+}
+
+.enduranceLost {
+	background-image:url("/images/background/sang.jpg");
+	background-position: center;
+	width:50%;
+	height: 33%;
+	left: 25%;
+	position:fixed;
+	top:33%;
+	z-index:2;
+	border-radius:80px;
+	border-color: black;
+	border-width: 3px;
+	text-align: center;
+	font-size: 24px;
+	color:white;
+	font-weight: bold;
+}
+
+.nouvelItem {
+	background-image:url("/images/background/item.jpg");
+	background-position: center;
+	width:50%;
+	height: 20%;
+	left: 25%;
+	position:fixed;
+	top:40%;
+	z-index:2;
+	border-radius:80px;
+	border-color: black;
+	border-width: 3px;
+	text-align: center;
+	font-size: 24px;
+	color:white;
+	font-weight: bold;
+}
+
+.ajoutsItems {
+	background-image:url("/images/background/item.jpg");
+	background-position: center;
+	width:50%;
+	height: 33%;
+	left: 25%;
+	position:fixed;
+	top:33%;
+	z-index:2;
+	border-radius:80px;
+	border-color: black;
+	border-width: 3px;
+	text-align: center;
+	font-size: 24px;
+	color:white;
+	font-weight: bold;
+}
+
+.ennemyPicture {
+	border-width: 2px;
+	border-color: red;
+	position: fixed;
+	top: 10%;
+	width: 16%;
+	left: 0%;
+	height: 80%;
+}
+
+.swordPicture {
+	position: absolute;
+	top: 0%;
+	width: 15%;
+	left: 0%;
+	height: 80%;
+}
+
+.sacContent ul {
+	list-style-type: none;
+}
+
+.informationsCombat {
+	border-color: black;
+	border-radius: 20px;
+	border-width: 2px;
+}
+
+.informationsCombat ul {
+	list-style-type: none;
+}
+
+.choix_stats {
+	background: url("/images/background/choix.jpg");
+	background-position: bottom;
+	color: white;
+	border-color: white;
+}
+
+.stats_combat {
+	background: url("/images/background/choix.jpg");
+	background-position: bottom;
+	color: white;
+	border-color: white;
+}
+
+.choix_stats a {
+	color: white;
+	font-weight: bold;
+}
+
+.choix_stats legend {
+	color: white;
+}
+
+.boutons {
+	width:25%;
+	left: 20%;
+	position:relative;
+}
+
+#boutonCentral {
+	position:fixed;
+	top:85%;
+	width:33%;
+	left: 33%;
+}
+
+#fondCreation {
+	opacity: 0.2;
+	z-index:-1;
+	position:fixed;
+	top:15%;
+	left:15%;
+	width:70%;
+	height:70%;
+}
+
+.messageErreur {
+	color:red;
+	font-size: x-large;
+}
+
+.invisible {
+	display:none;
+}

@@ -1,0 +1,45 @@
+
+html
+	head
+		if title == "Page d'accueil" 
+			title= "Le Loup solitaire"
+		else 
+			title= "Le Loup solitaire - "+title 
+		link(rel='stylesheet', href='/stylesheets/style.css')
+
+	script(src="/javascripts/jquery.js")
+
+	header
+		include header
+		
+	include popups.jade
+	
+	body(ng-controller="ChargementPage")
+		div(class="jeu")
+			block content
+			if ennemi_ou_perte && ennemi_ou_item
+				input(type="button",onclick="location.href='/combat';",value="A l'attaque !")
+				input(type="button",onclick="location.href='';",value="Fuir !")
+	
+		if !ennemi_ou_perte
+			if !ennemi_ou_item
+				div(class="jeu")
+						fieldset(class="choix_stats")
+							legend Choix
+							for c in choix
+								a.choice(href="/jeu/"+c)=c
+								br
+			img(src="/images/armes/epee.png",class="swordPicture")
+			
+		aside
+			fieldset(class="stats")
+				legend Statistique
+				include statistique
+		
+		div(class="jeu")
+			fieldset
+				legend Historique des combats
+				include historiqueCombat
+	
+	footer
+		include footer
